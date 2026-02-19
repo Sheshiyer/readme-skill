@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "^Bash$",
+        "permissionMode": "allow-all",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /Users/sheshnarayaniyer/.craft-agent/workspaces/my-workspace/scripts/readme-push-counter.sh",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "SchedulerTick": [
+      {
+        "cron": "0 10 * * 1",
+        "timezone": "Asia/Kolkata",
+        "labels": ["Scheduled", "readme-check"],
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "README freshness check: Scan the current working directory (if it's a git repo) for recent activity. Check: 1) Any new git tags or releases since the last README update? 2) Has the tech stack changed (new dependencies, removed packages)? 3) Are there new directories or major structural changes? 4) Has the CI/CD config changed? If any of these are true, summarize what changed and suggest running `/readme --update` to refresh the README. If the README looks current, just confirm it's up to date. Be concise."
+          }
+        ]
+      }
+    ]
+  }
+}
