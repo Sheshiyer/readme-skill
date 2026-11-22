@@ -1,0 +1,44 @@
+{
+  "schema": "temperance.orchestration.v1",
+  "plan_id": "plan_044aa7baf6e49ebfb494",
+  "state": "draft",
+  "mapping": {
+    "policy_hash": "f41f6873f99821c46610410fd977e0b454cbc60fd898ef6e8d06c4333bc32605",
+    "phase_combo_map": "temperance.phase-combo-map.v2",
+    "planner": "temperance-next-wave"
+  },
+  "source_fingerprints": [
+    {
+      "path": ".planning/STATE.md",
+      "fingerprint": "5cbbf849ad8e6e48641c28c161a7057360fcb0e50ede6bd902f1b14cebb05ea9"
+    },
+    {
+      "path": ".planning/PROJECT.md",
+      "fingerprint": "029eec5eb4ae589b9459a392157bd9688d592a5a0e25efbd281ddf37db605c06"
+    }
+  ],
+  "research": [],
+  "options": [],
+  "approval": null,
+  "readiness": {
+    "status": "blocked",
+    "checks": [
+      "human_approval",
+      "source_freshness",
+      "quota_snapshot",
+      "dispatch_receipt"
+    ]
+  },
+  "execution": {
+    "status": "blocked",
+    "reason": "no executable proposal"
+  },
+  "reporting": {
+    "status": "pending",
+    "required_receipts": [
+      "dispatch",
+      "task",
+      "verification"
+    ]
+  }
+}

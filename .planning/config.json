@@ -1,0 +1,23 @@
+{
+  "mode": "interactive",
+  "granularity": "coarse",
+  "workflow": {
+    "research": false,
+    "plan_check": true,
+    "verifier": true,
+    "auto_advance": false
+  },
+  "parallelization": {
+    "enabled": true,
+    "plan_level": false,
+    "task_level": true,
+    "skip_checkpoints": false,
+    "max_concurrent_agents": 4,
+    "min_plans_for_parallel": 2
+  },
+  "temperance": {
+    "next_wave": true,
+    "fleet_combo": "noesis-execute",
+    "host_runtime": "~/.temperance_engine"
+  }
+}
